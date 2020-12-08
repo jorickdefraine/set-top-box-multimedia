@@ -34,6 +34,7 @@ SetTopBoxMultimedia::~SetTopBoxMultimedia() {
 
 }
 
-void SetTopBoxMultimedia::showVar(std::ostream & s, SetTopBoxMultimedia * o) {
-    s << o->getName() << " " << o->getPathname() << std::endl;
+// Displayer
+void SetTopBoxMultimedia::display(std::ostream & s, SetTopBoxMultimedia * setTopBoxMultimedia) const {
+    s << setTopBoxMultimedia->getName() << " " << setTopBoxMultimedia->getPathname() << std::endl;
 }

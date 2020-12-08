@@ -19,7 +19,7 @@ public:
     void setPathname(string p);
     string getName() const;
     string getPathname() const;
-    void showVar(std::ostream & s, SetTopBoxMultimedia * o);
+    void display(std::ostream & s, SetTopBoxMultimedia * setTopBoxMultimedia) const;
 
 };
 

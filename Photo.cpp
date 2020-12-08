@@ -3,8 +3,11 @@
 //
 
 #include "Photo.h"
+#include "SetTopBoxMultimedia.h"
+#include <string>
+using namespace std;
 
-Photo::Photo(int _latitude, int _longitude) {
+Photo::Photo(int _latitude, int _longitude) : SetTopBoxMultimedia(name, pathname) {
     latitude = _latitude;
     longitude = _longitude;
 }
@@ -25,4 +28,11 @@ int Photo::getLat() const {
 
 int Photo::getLon() const {
     return longitude;
+}
+
+// Displayer
+void Photo::play(Photo * photo) const {
+    std::string str ("imagej "+photo->getName()+" &");
+
+    system(str.c_str());
 }
