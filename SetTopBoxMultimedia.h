@@ -15,14 +15,11 @@ public:
     SetTopBoxMultimedia(string name, string pathname);
     SetTopBoxMultimedia();
     ~SetTopBoxMultimedia();
-    void setName(string n); //{name = n;};
-    void setPathname(string p); //{pathname = p;};
-    string getName() const; //{return name;};
-    string getPathname() const; //{return pathname;};
-
+    void setName(string n);
+    void setPathname(string p);
+    string getName() const;
+    string getPathname() const;
     void showVar(std::ostream & s, SetTopBoxMultimedia * o);
-    void display() const;
-
 
 };
 
