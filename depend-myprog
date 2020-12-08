@@ -1,0 +1,2 @@
+SetTopBoxMultimedia.o: SetTopBoxMultimedia.cpp SetTopBoxMultimedia.h
+main.o: main.cpp
