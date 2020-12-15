@@ -38,5 +38,3 @@ void SetTopBoxMultimedia::display(std::ostream & s) const {
     s << this->getName() << " " << this->getPathname() << std::endl;
 }
 
-// Player
-void SetTopBoxMultimedia::play() const {}

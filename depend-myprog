@@ -2,3 +2,4 @@ SetTopBoxMultimedia.o: SetTopBoxMultimedia.cpp SetTopBoxMultimedia.h
 main.o: main.cpp SetTopBoxMultimedia.h Photo.h Video.h
 Photo.o: Photo.cpp Photo.h SetTopBoxMultimedia.h
 Video.o: Video.cpp Video.h SetTopBoxMultimedia.h
+Film.o: Film.cpp Film.h Video.h SetTopBoxMultimedia.h

@@ -5,8 +5,9 @@
 #include "Video.h"
 #include "SetTopBoxMultimedia.h"
 
-Video::Video(int _duration) : SetTopBoxMultimedia(name, pathname) {
+Video::Video(string name, string pathname, int _duration) : SetTopBoxMultimedia(name, pathname) {
     duration = _duration;
+
 }
 
 // Setter
@@ -19,7 +20,6 @@ int Video::getDuration() const {
     return duration;
 }
 
-Video::~Video() noexcept {}
 
 // Player
 void Video::play() const {

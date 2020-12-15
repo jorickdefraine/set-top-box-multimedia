@@ -22,7 +22,7 @@ public:
     string getName() const;
     string getPathname() const;
     virtual void display(std::ostream & s) const;
-    virtual void play() const;
+    virtual void play() const=0;
 };
 
 #endif //SET_TOP_BOX_MULTIMEDIA_JORICK_SETTOPBOXMULTIMEDIA_H

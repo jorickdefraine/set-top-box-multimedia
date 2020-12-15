@@ -7,7 +7,7 @@
 #include <string>
 using namespace std;
 
-Photo::Photo(int _latitude, int _longitude) : SetTopBoxMultimedia(name, pathname) {
+Photo::Photo(string name, string pathname, int _latitude, int _longitude) : SetTopBoxMultimedia(name, pathname) {
     latitude = _latitude;
     longitude = _longitude;
 }
@@ -29,8 +29,6 @@ int Photo::getLat() const {
 int Photo::getLon() const {
     return longitude;
 }
-
-Photo::~Photo() noexcept {}
 
 // Player
 void Photo::play() const {

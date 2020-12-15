@@ -5,15 +5,15 @@
 #ifndef SET_TOP_BOX_MULTIMEDIA_JORICK_PHOTO_H
 #define SET_TOP_BOX_MULTIMEDIA_JORICK_PHOTO_H
 #include "SetTopBoxMultimedia.h"
+#include <string>
 
 class Photo : public SetTopBoxMultimedia{
 protected:
     int latitude{}, longitude{};
 
 public:
-    Photo(int latitude, int longitude);
+    Photo(string name, string pathname, int latitude, int longitude);
     Photo();
-    ~Photo();
     void setLat(int lat);
     void setLon(int lon);
     int getLat() const;

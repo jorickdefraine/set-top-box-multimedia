@@ -9,18 +9,18 @@
 
 class Video : public SetTopBoxMultimedia{
 protected:
-    int duration{};
+    int duration=0;
+
 
 public:
-    Video(int duration);
+    Video(string name, string pathname, int duration);
     Video();
-    ~Video();
     void setDuration(int dur);
     int getDuration() const;
-    void display(std::ostream &s) const override{
+    void display(std::ostream &s) const override {
         SetTopBoxMultimedia::display(s);
-    };
-    void play() const;
+    }
+    void play() const override;
 
 };
 
