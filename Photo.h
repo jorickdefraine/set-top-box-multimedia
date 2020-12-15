@@ -8,16 +8,20 @@
 
 class Photo : public SetTopBoxMultimedia{
 protected:
-    int latitude = 0, longitude = 0;
+    int latitude{}, longitude{};
 
 public:
     Photo(int latitude, int longitude);
     Photo();
+    ~Photo();
     void setLat(int lat);
     void setLon(int lon);
     int getLat() const;
     int getLon() const;
-    void play(Photo * photo) const;
+    void display(std::ostream &s) const override{
+        SetTopBoxMultimedia::display(s);
+    };
+    void play() const;
 
 };
 

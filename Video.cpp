@@ -19,9 +19,12 @@ int Video::getDuration() const {
     return duration;
 }
 
-// Displayer
-void Video::play(Video * video) const {
-    std::string str ("mpv "+video->getName()+" &");
+Video::~Video() noexcept {}
+
+// Player
+void Video::play() const {
+    std::string str ("mpv "+this->getName()+" &");
 
     system(str.c_str());
+
 }

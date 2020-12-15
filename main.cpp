@@ -11,7 +11,7 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
 
     SetTopBoxMultimedia * setTopBoxMultimedia1 = new SetTopBoxMultimedia("objet1", "set-top-box-multimedia-jorick/objet1.txt");
-    setTopBoxMultimedia1->display(std::cout, setTopBoxMultimedia1);
+    setTopBoxMultimedia1->display(std::cout);
 
 
     //std::list<SetTopBoxMultimedia> listofmedia = { Photo(10, 15),

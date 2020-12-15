@@ -30,9 +30,12 @@ int Photo::getLon() const {
     return longitude;
 }
 
-// Displayer
-void Photo::play(Photo * photo) const {
-    std::string str ("imagej "+photo->getName()+" &");
+Photo::~Photo() noexcept {}
+
+// Player
+void Photo::play() const {
+    std::string str ("imagej "+this->getName()+" &");
 
     system(str.c_str());
+
 }

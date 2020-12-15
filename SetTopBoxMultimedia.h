@@ -5,6 +5,8 @@
 #ifndef SET_TOP_BOX_MULTIMEDIA_JORICK_SETTOPBOXMULTIMEDIA_H
 #define SET_TOP_BOX_MULTIMEDIA_JORICK_SETTOPBOXMULTIMEDIA_H
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 class SetTopBoxMultimedia{
@@ -14,13 +16,13 @@ protected:
 public:
     SetTopBoxMultimedia(string name, string pathname);
     SetTopBoxMultimedia();
-    ~SetTopBoxMultimedia();
+    virtual ~SetTopBoxMultimedia();
     void setName(string n);
     void setPathname(string p);
     string getName() const;
     string getPathname() const;
-    void display(std::ostream & s, SetTopBoxMultimedia * setTopBoxMultimedia) const;
-
+    virtual void display(std::ostream & s) const;
+    virtual void play() const;
 };
 
 #endif //SET_TOP_BOX_MULTIMEDIA_JORICK_SETTOPBOXMULTIMEDIA_H

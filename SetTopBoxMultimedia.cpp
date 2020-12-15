@@ -31,10 +31,12 @@ string SetTopBoxMultimedia::getPathname() const{
 }
 
 SetTopBoxMultimedia::~SetTopBoxMultimedia() {
-
 }
 
 // Displayer
-void SetTopBoxMultimedia::display(std::ostream & s, SetTopBoxMultimedia * setTopBoxMultimedia) const {
-    s << setTopBoxMultimedia->getName() << " " << setTopBoxMultimedia->getPathname() << std::endl;
+void SetTopBoxMultimedia::display(std::ostream & s) const {
+    s << this->getName() << " " << this->getPathname() << std::endl;
 }
+
+// Player
+void SetTopBoxMultimedia::play() const {}
