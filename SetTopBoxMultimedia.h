@@ -17,10 +17,13 @@ public:
     SetTopBoxMultimedia(string name, string pathname);
     SetTopBoxMultimedia();
     virtual ~SetTopBoxMultimedia();
+
     void setName(string n);
     void setPathname(string p);
+
     string getName() const;
     string getPathname() const;
+
     virtual void display(std::ostream & s) const;
     virtual void play() const=0;
 };

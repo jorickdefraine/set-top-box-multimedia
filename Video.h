@@ -15,8 +15,11 @@ protected:
 public:
     Video(string name, string pathname, int duration);
     Video();
+
     void setDuration(int dur);
+
     int getDuration() const;
+
     void display(std::ostream &s) const override {
         SetTopBoxMultimedia::display(s);
     }

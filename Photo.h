@@ -14,10 +14,13 @@ protected:
 public:
     Photo(string name, string pathname, int latitude, int longitude);
     Photo();
+
     void setLat(int lat);
     void setLon(int lon);
+
     int getLat() const;
     int getLon() const;
+
     void display(std::ostream &s) const override{
         SetTopBoxMultimedia::display(s);
     };

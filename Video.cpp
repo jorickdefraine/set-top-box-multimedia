@@ -23,7 +23,7 @@ int Video::getDuration() const {
 
 // Player
 void Video::play() const {
-    std::string str ("mpv "+this->getName()+" &");
+    std::string str ("mpv "+this->getPathname()+" &");
 
     system(str.c_str());
 

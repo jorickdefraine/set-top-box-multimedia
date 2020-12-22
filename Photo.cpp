@@ -32,7 +32,7 @@ int Photo::getLon() const {
 
 // Player
 void Photo::play() const {
-    std::string str ("imagej "+this->getName()+" &");
+    std::string str ("imagej "+this->getPathname()+" &");
 
     system(str.c_str());
 
