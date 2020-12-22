@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Hello World!" << std::endl;
 
     SetTopBoxMultimedia ** tab = new SetTopBoxMultimedia*[100];
     unsigned int count = 0;
