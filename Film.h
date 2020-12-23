@@ -10,20 +10,34 @@
 
 class Film : public Video{
 private:
-    int * chapters{};
+    //int * firstChapter{};
     int nbChapters{};
+    int chapters[];
 
 public:
-    Film(string name, string pathname, int duration, int * chapters, int nbChapters);
+    //Film(string name, string pathname, int duration, int * firstChapter, int nbChapters, int chapters[]);
+    Film(string name, string pathname, int duration, int nbChapters, int chapters[]);
     Film();
+    ~Film() override{};
 
-    void setChapters(int * _chapters, int _nbChapters);
+    //void setChapters(int * _firstChapter, int _nbChapters);
+    void setChapters(int _nbChapters, int _chapters[]);
 
-    int * getChapters() const;
-    int getNbChapters() const;
+    //const int * getFirstChapter() const{return firstChapter;};
+    //const int getChapters() const{return chapters;};
+
+    const int getNbChapters() const{return nbChapters;};
 
     void display(std::ostream &s) const override {
-        s << this->getChapters() << std::endl;
+        for (int k = 0; k < getNbChapters(); k++){
+            //s << getFirstChapter() << " " << chapters[k] <<std::endl;
+            //(* firstChapter)++;
+            //cout << "\n";
+            s << chapters[k] << std::endl;
+        }
+        //s << *chapters << std::endl;
+
+        //s << this->getFirstChapter() << std::endl;
     }
 };
 

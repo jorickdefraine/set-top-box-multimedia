@@ -25,6 +25,19 @@ int main() {
     }
     delete []tab;
 
+    int tableau[3] = {10,6,7};
+    //Film * film1 = new Film("freedomcorp2", "data/freedomcorp2.mp4",23, &tableau[0], 3, tableau);
+    Film * film1 = new Film("freedomcorp2", "data/freedomcorp2.mp4",23,3, tableau);
+
+    film1->display(cout);
+    delete film1;
+
+    //tableau[0] = 9;
+    //tableau[1] = 7;
+    //film1->display(cout);
+
+    //film1->display(cout);
+
     //film1 = new Film("freedomcorp2", "data/freedomcorp2.mp4",23, chapters=10, 3)
     //film1->display(cout);
     //cout << "\n";
