@@ -24,7 +24,7 @@ public:
     void setChapters(int _nbChapters, int _chapters[]);
 
     //const int * getFirstChapter() const{return firstChapter;};
-    //const int getChapters() const{return chapters;};
+    const int getChapters() const{return *chapters;};
 
     const int getNbChapters() const{return nbChapters;};
 
