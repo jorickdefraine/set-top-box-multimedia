@@ -12,28 +12,35 @@ class Film : public Video{
 private:
     //int * firstChapter{};
     int nbChapters{};
-    int chapters[];
+    int *chapters = nullptr;
 
 public:
-    //Film(string name, string pathname, int duration, int * firstChapter, int nbChapters, int chapters[]);
-    Film(string name, string pathname, int duration, int nbChapters, int chapters[]);
-    Film();
-    ~Film() override{};
 
-    //void setChapters(int * _firstChapter, int _nbChapters);
-    void setChapters(int _nbChapters, int _chapters[]);
+    Film(string name, string pathname, int duration, int nbChapters, int *chapters);
+    //Film();
+    ~Film() override{delete[] chapters;}
 
-    //const int * getFirstChapter() const{return firstChapter;};
-    const int getChapters() const{return *chapters;};
+    void setChapters(int _nbChapters, int *_chapters);
 
-    const int getNbChapters() const{return nbChapters;};
+    const int *getChapters() const{
+        //int *chapters_copy = chapters;
+
+        int * chapters_copy = new int[nbChapters];
+        for(int i = 0; i < nbChapters; i++) {
+            chapters_copy[i] = chapters[i];
+        }
+        //delete[] chapters;
+        return chapters_copy;
+    }
+
+    const int getNbChapters() const{return nbChapters;}
 
     void display(std::ostream &s) const override {
         for (int k = 0; k < getNbChapters(); k++){
             //s << getFirstChapter() << " " << chapters[k] <<std::endl;
             //(* firstChapter)++;
             //cout << "\n";
-            s << chapters[k] << std::endl;
+            s << getChapters() << std::endl;
         }
         //s << *chapters << std::endl;
 
