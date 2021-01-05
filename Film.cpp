@@ -6,7 +6,21 @@
 #include "Video.h"
 #include "SetTopBoxMultimedia.h"
 
-Film::Film(string name, string pathname, int duration, int _nbChapters, int *_chapters) : Video(name, pathname, duration) {
+Film::Film(const Film& FilmCopied):Video(FilmCopied),nbChapters(FilmCopied.nbChapters){
+    chapters = new int (*(FilmCopied.chapters));
+}
+
+Film& Film::operator=(const Film &FilmCopied) {
+    if(this!=&FilmCopied){
+        Video::operator=(FilmCopied);
+        nbChapters=FilmCopied.nbChapters;
+        delete[] chapters;
+        chapters = new int (*(FilmCopied.chapters));
+    }
+    return *this;
+}
+
+Film::Film(string name, string pathname, int duration, int _nbChapters, const int *_chapters) : Video(name, pathname, duration) {
     nbChapters = _nbChapters;
 
     delete []chapters;

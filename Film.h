@@ -16,9 +16,11 @@ private:
 
 public:
 
-    Film(string name, string pathname, int duration, int nbChapters, int *chapters);
-    //Film();
-    ~Film() override{delete[] chapters;}
+    Film();
+    Film(string name, string pathname, int duration, int nbChapters, const int *chapters);
+    Film(const Film& FilmCopied);
+    Film& operator = (const Film& FilmCopied);
+    virtual ~Film() final {delete[] chapters; cout<<"Film "<<getName()<<" is dying."<<endl;}
 
     void setChapters(int _nbChapters, int *_chapters);
 
